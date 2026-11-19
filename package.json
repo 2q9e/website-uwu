@@ -1,0 +1,12 @@
+{
+  "name": "enactus-mcmaster-site",
+  "private": true,
+  "type": "module",
+  "license": "SEE LICENSE IN LICENSE",
+  "copyright": "Copyright (c) 2026 Enactus McMaster. All rights reserved. Source available for viewing only. See LICENSE.",
+  "engines": { "node": ">=24" },
+  "scripts": {
+    "build": "tsc -p tsconfig.json && node scripts/build.ts"
+  },
+  "devDependencies": { "typescript": "5.9.3" }
+}

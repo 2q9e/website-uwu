@@ -1,0 +1,13 @@
+// Copyright (c) 2026 Enactus McMaster. All rights reserved. Source available for viewing only. See LICENSE.
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "ES2022",
+    "moduleResolution": "bundler",
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "strict": true,
+    "noEmit": true,
+    "allowImportingTsExtensions": true
+  },
+  "include": ["site/**/*.ts"]
+}
