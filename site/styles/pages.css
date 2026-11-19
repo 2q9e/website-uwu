@@ -1,0 +1,164 @@
+/*
+ * Copyright (c) 2026 Enactus McMaster. All rights reserved.
+ * Source available for viewing only. See LICENSE.
+ */
+
+.page-heading {
+  padding-block: clamp(64px, 9vw, 128px) var(--s8);
+}
+
+.page-heading-split,
+.page-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: clamp(24px, 6vw, 80px);
+}
+
+.page-heading h1,
+.legal-page h1 {
+  max-width: 12ch;
+  font: 600 clamp(3.5rem, 7vw, 7.25rem) / .95 var(--display);
+  letter-spacing: -.025em;
+}
+
+.page-label {
+  margin-bottom: var(--s3);
+  color: var(--maroon);
+  font-size: .875rem;
+  font-weight: 700;
+}
+
+.page-lead {
+  max-width: 44ch;
+  margin-top: var(--s5);
+  color: var(--muted);
+  font-size: clamp(1.1rem, 1.8vw, 1.35rem);
+}
+
+.page-photo img,
+.page-mark {
+  border-radius: var(--radius-frame);
+  width: 100%;
+}
+
+.page-photo figcaption {
+  margin-top: var(--s2);
+  color: var(--muted);
+  font-size: .875rem;
+}
+
+.page-mark {
+  display: grid;
+  place-items: center;
+  background: var(--project-ground);
+  min-height: 280px;
+}
+
+.page-mark img {
+  width: min(65%, 232px);
+  height: auto;
+}
+
+.page-section {
+  padding-block: clamp(36px, 6vw, 80px);
+  border-top: 1px solid var(--line);
+}
+
+.page-section h2,
+.page-callout h2,
+.legal-page h2 {
+  font-family: var(--display);
+  letter-spacing: -.02em;
+}
+
+.page-copy > p + p { margin-top: var(--s4); }
+.page-copy > a { margin-top: var(--s4); }
+
+.page-cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--s5);
+}
+
+.page-card,
+.inner-feature {
+  padding: clamp(24px, 4vw, 56px);
+  background: var(--project-ground);
+  border-radius: var(--project-radius);
+}
+
+.page-card h2 { font-size: clamp(2rem, 4vw, 3.5rem); }
+.page-card h2 + p, .page-card p + a { margin-top: var(--s4); }
+.page-card p:not(.page-label) { max-width: 56ch; }
+
+.inner-feature {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: var(--s7);
+  margin-bottom: var(--s5);
+  background: var(--maroon);
+  color: var(--white);
+}
+.inner-feature :is(h2, .page-label) { color: var(--white); }
+
+.page-callout {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--s5);
+  padding: clamp(24px, 5vw, 64px);
+  margin-block: 0 var(--s8);
+  border-radius: var(--project-radius);
+  background: var(--project-ground);
+}
+.page-callout h2 + p { margin-top: var(--s2); }
+
+.page-actions {
+  display: flex;
+  gap: var(--s4);
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: var(--s4);
+}
+
+.results-section > p {
+  margin-top: var(--s2);
+  color: var(--muted);
+}
+
+.results-list {
+  margin-top: var(--s6);
+  border-top: 1px solid var(--line);
+}
+.results-list > article {
+  display: grid;
+  grid-template-columns: 145px 1fr auto;
+  align-items: baseline;
+  gap: var(--s4);
+  padding-block: var(--s5);
+  border-bottom: 1px solid var(--line);
+}
+.results-list h3 { font-size: 1.125rem; }
+.results-list h3 + p { margin-top: var(--s1); color: var(--muted); }
+.results-list strong { color: var(--maroon); }
+
+.legal-page {
+  max-width: 740px;
+  padding-block: var(--s8) var(--s10);
+}
+.legal-page h1 { max-width: none; }
+.legal-date { margin-block: var(--s4) var(--s7); color: var(--muted); }
+.legal-page section { margin-top: var(--s7); }
+.legal-page h2 { font-size: clamp(2rem, 4vw, 2.75rem); }
+.legal-page section p { margin-top: var(--s3); }
+.legal-page a { color: var(--maroon); overflow-wrap: anywhere; }
+
+@media (max-width: 760px) {
+  .page-heading-split, .page-split, .page-cards, .inner-feature { grid-template-columns: 1fr; }
+  .page-callout { flex-direction: column; align-items: flex-start; }
+  .results-list > article { grid-template-columns: 1fr auto; }
+  .results-list .page-label { grid-column: 1 / -1; margin: 0; }
+  .legal-page { padding-bottom: var(--s8); }
+}
