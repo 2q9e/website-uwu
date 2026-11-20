@@ -1,10 +1,8 @@
 <!-- Copyright (c) 2026 Enactus McMaster. All rights reserved. Source available for viewing only. See LICENSE. -->
 
-# Enactus McMaster website
+# Enactus McMaster Website
 
-A static TypeScript website for the McMaster University student team. The
-homepage follows the supplied design, and the chapter, projects, team,
-recruitment, privacy and terms pages are available at their own addresses.
+This static site introduces Enactus McMaster and gives visitors dedicated pages for the chapter, projects, team, recruitment, and policies. The TypeScript source separates page composition and shared content from styles, assets, and browser interactions.
 
 ## Source layout
 
